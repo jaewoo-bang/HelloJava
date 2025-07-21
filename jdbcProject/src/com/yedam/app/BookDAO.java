@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 // 조회, 등록, 수정, 삭제
 public class BookDAO {
+	// 숙제: 삭제(delete), 단건조회(findById) 작성해보세용.
+	
 	// 수정. 매개값(int bno, int price), 반환값(boolean)
 	public boolean update(int bno, int price) {
 		Connection conn = DButill.getConnect();
@@ -25,9 +27,9 @@ public class BookDAO {
 				return true;
 			}
 		}
-			catch (SQLException e) {
-				e.printStackTrace();
-			}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 		
 	}//end of update
