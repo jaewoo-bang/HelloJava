@@ -34,6 +34,35 @@ public class Main {
     					);
     		}//end of for
     		break;
+    	 case 2: //도서 등록.
+    		 System.out.print("도서번호>> ");
+    		 int bno = sc.nextInt();sc.nextLine(); // 1003 엔터.   반환값이 int.
+    		 System.out.print("도서제목>> ");
+    		 String title = sc.nextLine(); //반환값이 String.
+    		 System.out.print("도서저자>> ");
+    		 String author = sc.nextLine(); //반환값이 String.
+    		 System.out.print("도서가격>> ");
+    		 int price = sc.nextInt();sc.nextLine(); //반환값이 int.
+    		 
+    		 Book book = new Book(bno, title, author, price);
+    		 if(dao.insert(book)) {
+    			 System.out.println("정상 등록.");
+    		 } else {
+    			 System.out.println("등록 중 오류.");
+    		 }
+    		 break;
+    	 case 3: // 수정.
+    		 System.out.print("도서번호>> ");
+    		 bno = sc.nextInt();sc.nextLine(); // 1003 엔터.   반환값이 int.
+    		 System.out.print("도서가격>> ");
+    		 price = sc.nextInt();sc.nextLine(); //반환값이 int.
+    		 
+    		 if(dao.update(bno,price)) {
+    			 System.out.println("정상 수정.");
+    		 } else {
+    			 System.out.println("수정 중 오류.");
+    		 }
+    		 break;
     	 case 9: // 종료.
     		run = false;
     		}//end of switch
