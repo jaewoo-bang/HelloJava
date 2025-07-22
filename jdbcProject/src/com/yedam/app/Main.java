@@ -34,6 +34,7 @@ public class Main {
     					);
     		}//end of for
     		break;
+    		
     	 case 2: //도서 등록.
     		 System.out.print("도서번호>> ");
     		 int bno = sc.nextInt();sc.nextLine(); // 1003 엔터.   반환값이 int.
